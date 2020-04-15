@@ -1,4 +1,0 @@
-// COLOR PICKER
-@function colorPick($color-name) {
-  @return map-get($colors, $color-name);
-}
