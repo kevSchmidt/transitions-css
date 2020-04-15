@@ -1,3 +1,4 @@
-body {
-  background-attachment: pink;
-}
+@import "variables";
+@import "function";
+@import "body";
+@import "navigation";

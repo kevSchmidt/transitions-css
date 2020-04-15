@@ -1,0 +1,11 @@
+body {
+  background-color: colorPick(white);
+
+  #box {
+    width: $box-size-large;
+    height: $box-size-medium;
+    border-radius: 3px;
+    background-color: colorPick(red);
+    border: 3px solid colorPick(blue);
+  }
+}

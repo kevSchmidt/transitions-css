@@ -1,0 +1,25 @@
+nav {
+  width: 100%;
+  background-color: colorPick(blue-soft);
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  li {
+    list-style: none;
+    padding: $box-size-extra-small;
+  }
+
+  a {
+    padding: $box-size-extra-small;
+    color: colorPick(white);
+    text-decoration: none;
+    margin-right: $box-size-small;
+
+    &:hover {
+      background-color: colorPick(black);
+    }
+  }
+}
