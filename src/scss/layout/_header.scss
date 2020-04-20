@@ -1,0 +1,34 @@
+h1 {
+  // Phones
+  @include respond(phone-xs) {
+    color: green;
+  }
+  @include respond(phone-s) {
+    color: blue;
+  }
+  @include respond(phone-m) {
+    color: yellow;
+  }
+  @include respond(phone-l) {
+    color: black;
+  }
+
+  // Tablets
+  @include respond(tablet) {
+    color: purple;
+  }
+  @include respond(tablet-xl) {
+    color: red;
+  }
+
+  //Laptops
+  @include respond(laptop) {
+    color: sandybrown;
+  }
+  @include respond(laptop-l) {
+    color: slateblue;
+  }
+  @include respond(laptop-4k) {
+    color: orangered;
+  }
+}
