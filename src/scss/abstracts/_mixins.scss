@@ -1,9 +1,36 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
+// ===== DISPLAY FLEX ===
 
-// MEDIA QUERIES
-// ORDER: Base + typography > general layout + grid > page layout > components
+@mixin u-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin u-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin u-flex-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin u-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+// ===== BUTTON ===
+
+@mixin u-virgin {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+// ===== MEDIA QUERIES ===
 
 @mixin respond($breakpoint) {
   // Moto 4 / Galaxy S5

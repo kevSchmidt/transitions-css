@@ -1,2 +1,1 @@
-# Template for SCSS files
-
+# Template for SCSS
