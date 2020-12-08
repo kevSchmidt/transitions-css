@@ -1,0 +1,207 @@
+/* ===== HOME Transition === */
+.transition--home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  opacity: 0;
+  background: #242831;
+  transition: 0.2s ease-out;
+  /* pointer can block interactivity with the page */
+  pointer-events: none;
+}
+
+.transition--home.is-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== CHAT Transition === */
+.transition--chat {
+  position: fixed;
+  top: 100%;
+  /* need a height to be placed out of the screen */
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background: #242831;
+  transition: 0.2s ease-out;
+}
+
+.transition--chat.is-active {
+  top: 0;
+}
+
+/* ===== LIKE Transition === */
+.transition--like {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* need a width to be placed out of the screen */
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background: #242831;
+  transition: 0.2s ease-out;
+}
+
+.transition--like.is-active {
+  left: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  background: #242831;
+  color: white;
+}
+
+header {
+  background: #242831;
+  padding: 0.5rem 1rem;
+  display: flex;
+}
+header .activator {
+  padding: 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+header .activator:hover {
+  background: #1e2129;
+}
+
+img {
+  width: 100%;
+  max-width: 2.8rem;
+}
+@media (max-width: 550px) {
+  img {
+    max-width: 1.8rem;
+  }
+}
+@media (max-width: 420px) {
+  img {
+    max-width: 0.8rem;
+  }
+}
+
+nav {
+  background: #292e38;
+  border-radius: 0 5rem 5rem 0;
+  padding: 0.5rem;
+  -webkit-clip-path: ellipse(50% 50% at -50% 50%);
+          clip-path: ellipse(50% 50% at -50% 50%);
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+}
+nav ul li a:hover {
+  background: #323844;
+}
+
+main .banner {
+  min-height: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .banner--img-1 {
+  background-image: url("https://www.vacancesfabuleuses.fr/wp-content/uploads/sites/5/2018/11/toronto.jpg");
+}
+main .banner--img-2 {
+  background-image: url("https://media.routard.com/image/80/9/san-francisco.1479809.c1000x300.jpg");
+}
+main .banner--img-3 {
+  background-image: url("https://city-breaker.com/wp-content/uploads/2018/11/Guide-de-Venise-CityBreaker.jpg");
+}
+main .banner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .banner h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 550px) {
+  main .banner h1 {
+    font-size: 2.8rem;
+  }
+}
+main .banner h3 {
+  font-size: 2.6rem;
+  text-align: center;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 550px) {
+  main .banner h3 {
+    font-size: 1.5rem;
+  }
+}
+main .banner .banner-inner {
+  position: relative;
+  z-index: 1;
+}
+main .page-content {
+  padding: 3rem 10rem 0;
+}
+@media (max-width: 850px) {
+  main .page-content {
+    padding: 3rem 5rem 0;
+  }
+}
+@media (max-width: 550px) {
+  main .page-content {
+    padding: 3rem 1rem 0;
+  }
+}
+main .page-content h2 {
+  color: #805ad5;
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+@media (max-width: 550px) {
+  main .page-content h2 {
+    text-align: center;
+  }
+}
+main .page-content p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+@media (max-width: 550px) {
+  main .page-content p {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvdHJhbnNpdGlvbnMuc2NzcyIsInN0eWxlLmNzcyIsIi4uL3Njc3MvbWFpbi5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhCQUFBO0FBQ0E7RUFDRSxlQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtFQUNBLGtEQUFBO0VBQ0Esb0JBQUE7QUNDRjs7QURDQTtFQUNFLFVBQUE7RUFDQSxtQkFBQTtBQ0VGOztBRENBLDhCQUFBO0FBQ0E7RUFDRSxlQUFBO0VBQ0EsU0FBQTtFQUNBLGlEQUFBO0VBQ0EsWUFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EseUJBQUE7QUNFRjs7QURBQTtFQUNFLE1BQUE7QUNHRjs7QURBQSw4QkFBQTtBQUNBO0VBQ0UsZUFBQTtFQUNBLE1BQUE7RUFDQSxXQUFBO0VBQ0EsZ0RBQUE7RUFDQSxXQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtBQ0dGOztBRERBO0VBQ0UsT0FBQTtBQ0lGOztBQ25EQTtFQUNFLFNBQUE7RUFDQSxVQUFBO0VBQ0Esb0NBQUE7QURzREY7O0FDbkRBO0VBQ0UsbUJBQUE7RUFDQSxZQUFBO0FEc0RGOztBQ2xEQTtFQUNFLG1CQUFBO0VBQ0Esb0JBQUE7RUFDQSxhQUFBO0FEcURGO0FDbkRFO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtBRHFESjtBQ3BESTtFQUNFLG1CQUFBO0FEc0ROOztBQ2pEQTtFQUNFLFdBQUE7RUFDQSxpQkFBQTtBRG9ERjtBQ25ERTtFQUhGO0lBSUksaUJBQUE7RURzREY7QUFDRjtBQ3JERTtFQU5GO0lBT0ksaUJBQUE7RUR3REY7QUFDRjs7QUNyREE7RUFDRSxtQkFBQTtFQUNBLDRCQUFBO0VBQ0EsZUFBQTtFQUNBLCtDQUFBO1VBQUEsdUNBQUE7QUR3REY7QUN0REU7RUFDRSxhQUFBO0VBQ0EscUJBQUE7QUR3REo7QUN0REk7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0FEd0ROO0FDdkRNO0VBQ0UsbUJBQUE7QUR5RFI7O0FDaERFO0VBQ0UsaUJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtFQUNBLDJCQUFBO0FEbURKO0FDakRJO0VBQ0UseUdBQUE7QURtRE47QUNqREk7RUFDRSxpR0FBQTtBRG1ETjtBQ2pESTtFQUNFLDRHQUFBO0FEbUROO0FDaERJO0VBQ0UsV0FBQTtFQUNBLGtCQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFVBQUE7RUFDQSxvQ0FBQTtBRGtETjtBQy9DSTtFQUNFLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSwyQ0FBQTtBRGlETjtBQ2hETTtFQUpGO0lBS0ksaUJBQUE7RURtRE47QUFDRjtBQ2hESTtFQUNFLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSwyQ0FBQTtBRGtETjtBQ2pETTtFQUpGO0lBS0ksaUJBQUE7RURvRE47QUFDRjtBQ2pESTtFQUNFLGtCQUFBO0VBQ0EsVUFBQTtBRG1ETjtBQzlDRTtFQUNFLHFCQUFBO0FEZ0RKO0FDL0NJO0VBRkY7SUFHSSxvQkFBQTtFRGtESjtBQUNGO0FDakRJO0VBTEY7SUFNSSxvQkFBQTtFRG9ESjtBQUNGO0FDbERJO0VBQ0UsY0FBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtBRG9ETjtBQ25ETTtFQUxGO0lBTUksa0JBQUE7RURzRE47QUFDRjtBQ25ESTtFQUNFLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtBRHFETjtBQ3BETTtFQUpGO0lBS0ksa0JBQUE7RUR1RE47QUFDRiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
