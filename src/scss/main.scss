@@ -1,22 +1,127 @@
-@charset "UTF-8";
+@import "./transitions.scss";
 
-// 1. Configuration
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+}
 
-// 2. Vendors
-@import "vendors/normalize";
+body {
+  background: rgb(36, 40, 49);
+  color: white;
+}
 
-// 3. Base
-@import "base/base", "base/fonts", "base/typography";
+// ===== HEADER CONTAINER ===
+header {
+  background: rgb(36, 40, 49);
+  padding: 0.5rem 1rem;
+  display: flex;
 
-// 4. Layout
-@import "layout/header", "layout/footer";
+  .activator {
+    padding: 1rem;
+    border-radius: 100%;
+    cursor: pointer;
+    &:hover {
+      background: rgb(30, 33, 41);
+    }
+  }
+}
 
-// 5. Components
-@import "components/button";
+img {
+  width: 100%;
+  max-width: 2.8rem;
+}
 
-// 6. Page
-@import "pages/home";
+nav {
+  background: rgb(41, 46, 56);
+  border-radius: 0 5rem 5rem 0;
+  padding: 0.5rem;
+  clip-path: ellipse(50% 50% at -50% 50%);
 
-// 7. Themes
-@import "themes/default";
+  ul {
+    display: flex;
+    list-style-type: none;
+
+    li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      margin: 0 0.5rem;
+      border-radius: 50%;
+      &:hover {
+        background: rgb(50, 56, 68);
+      }
+    }
+  }
+}
+
+// ===== MAIN CONTAINER ===
+main {
+  // BANNER
+  .banner {
+    min-height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // banner images
+    &--img-1 {
+      background-image: url("https://www.vacancesfabuleuses.fr/wp-content/uploads/sites/5/2018/11/toronto.jpg");
+    }
+    &--img-2 {
+      background-image: url("https://media.routard.com/image/80/9/san-francisco.1479809.c1000x300.jpg");
+    }
+    &--img-3 {
+      background-image: url("https://city-breaker.com/wp-content/uploads/2018/11/Guide-de-Venise-CityBreaker.jpg");
+    }
+    // banner overlay
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      text-align: center;
+      text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    h3 {
+      font-size: 2.6rem;
+      text-align: center;
+      text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-inner {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  // PAGE
+  .page-content {
+    padding: 3rem 10rem 0;
+
+    h2 {
+      color: #805ad5;
+      font-size: 2.4rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+  }
+}

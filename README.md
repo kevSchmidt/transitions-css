@@ -1,1 +1,1 @@
-# Template for SCSS
+# Training with vanilla JavaScript and SASS

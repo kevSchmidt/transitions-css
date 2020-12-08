@@ -1,0 +1,51 @@
+/* ===== HOME Transition === */
+.transition--home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  opacity: 0;
+  background: rgb(36, 40, 49);
+  transition: 0.2s ease-out;
+  /* pointer can block interactivity with the page */
+  pointer-events: none;
+}
+.transition--home.is-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== CHAT Transition === */
+.transition--chat {
+  position: fixed;
+  top: 100%;
+  /* need a height to be placed out of the screen */
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background: rgb(36, 40, 49);
+  transition: 0.2s ease-out;
+}
+.transition--chat.is-active {
+  top: 0;
+}
+
+/* ===== LIKE Transition === */
+.transition--like {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* need a width to be placed out of the screen */
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background: rgb(36, 40, 49);
+  transition: 0.2s ease-out;
+}
+.transition--like.is-active {
+  left: 0;
+}

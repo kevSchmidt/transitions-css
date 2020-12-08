@@ -1,7 +1,7 @@
 {
-  "name": "sassy-css-boilerplate",
+  "name": "transition-css",
   "version": "1.0.0",
-  "description": "Sassy CSS Boilerplate including Sass 7-1 Pattern",
+  "description": "Training with vanilla JS and Sass",
   "main": "index.js",
   "scripts": {
     "start": "run-p liveserver watch:styles",
