@@ -30,6 +30,12 @@ header {
 img {
   width: 100%;
   max-width: 2.8rem;
+  @media (max-width: 550px) {
+    max-width: 1.8rem;
+  }
+  @media (max-width: 420px) {
+    max-width: 0.8rem;
+  }
 }
 
 nav {
@@ -94,12 +100,18 @@ main {
       font-size: 4.5rem;
       text-align: center;
       text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+      @media (max-width: 550px) {
+        font-size: 2.8rem;
+      }
     }
 
     h3 {
       font-size: 2.6rem;
       text-align: center;
       text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+      @media (max-width: 550px) {
+        font-size: 1.5rem;
+      }
     }
 
     .banner-inner {
@@ -111,17 +123,30 @@ main {
   // PAGE
   .page-content {
     padding: 3rem 10rem 0;
+    @media (max-width: 850px) {
+      padding: 3rem 5rem 0;
+    }
+    @media (max-width: 550px) {
+      padding: 3rem 1rem 0;
+    }
 
     h2 {
       color: #805ad5;
       font-size: 2.4rem;
       font-weight: 300;
       margin-bottom: 2rem;
+      @media (max-width: 550px) {
+        text-align: center;
+      }
     }
 
     p {
       font-size: 1.1rem;
       line-height: 1.4;
+      margin-bottom: 2rem;
+      @media (max-width: 550px) {
+        text-align: center;
+      }
     }
   }
 }
