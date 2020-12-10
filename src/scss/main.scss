@@ -64,7 +64,7 @@ nav {
 
 // ===== MAIN CONTAINER ===
 main {
-  // BANNER
+  // BANNER SECTION
   .banner {
     min-height: 35rem;
     display: flex;
@@ -83,6 +83,9 @@ main {
     }
     &--img-3 {
       background-image: url("https://city-breaker.com/wp-content/uploads/2018/11/Guide-de-Venise-CityBreaker.jpg");
+    }
+    &--img-4 {
+      background-image: url("https://voyages.michelin.fr/sites/default/files/styles/background_poi_header/public/tokyo-pop_0.jpg?itok=sssx_co5");
     }
     // banner overlay
     &:after {
@@ -120,7 +123,7 @@ main {
     }
   }
 
-  // PAGE
+  // PAGE SECTION
   .page-content {
     padding: 3rem 10rem 0;
     @media (max-width: 850px) {
@@ -131,7 +134,6 @@ main {
     }
 
     h2 {
-      color: #805ad5;
       font-size: 2.4rem;
       font-weight: 300;
       margin-bottom: 2rem;
@@ -141,6 +143,7 @@ main {
     }
 
     p {
+      color: #f9f9f9;
       font-size: 1.1rem;
       line-height: 1.4;
       margin-bottom: 2rem;

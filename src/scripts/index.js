@@ -43,7 +43,7 @@ window.onload = () => {
 
   setTimeout(() => {
     transition_el.classList.remove("is-active"); // Remove "is-active" for the transition
-  }, 200);
+  }, 150);
 
   for (let i = 0; i < anchors.length; i++) {
     const anchor = anchors[i];
@@ -54,7 +54,7 @@ window.onload = () => {
 
       setTimeout(() => {
         window.location.href = target; // Add again link functionality after transition
-      }, 200);
+      }, 150);
     });
   }
 };
