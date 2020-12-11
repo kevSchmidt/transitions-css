@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS ANIMATIONS</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- SVGBOX: https://svgbox.net/iconsets -->
+  </head>
+
+  <body>
+    <!-- Like Page Transition -->
+    <div class="transition transition--like is-active"></div>
+
+    <header>
+      <img
+        class="activator"
+        id="activator"
+        src="//s.svgbox.net/hero-outline.svg?fill=fff#menu-alt-1"
+        alt="menu-icon"
+      />
+
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html" class="anchors-link">
+              <img
+                src="//s.svgbox.net/hero-outline.svg?fill=805ad5#home"
+                alt="home-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="./chat.html" class="anchors-link">
+              <img
+                src="//s.svgbox.net/hero-outline.svg?fill=805ad5#chat-alt-2"
+                alt="chat-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="./like.html" class="anchors-link">
+              <img
+                src="//s.svgbox.net/hero-outline.svg?fill=805ad5#heart"
+                alt="heart-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="./download.html">
+              <img
+                src="//s.svgbox.net/hero-outline.svg?fill=805ad5#cloud-download"
+                alt="download-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="//s.svgbox.net/hero-outline.svg?fill=805ad5#share"
+                alt="share-icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="grid" class="main">
+        <div class="view">
+          <div class="view-back">
+            <span data-icon="A">566</span>
+            <span data-icon="B">124</span>
+            <a
+              href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream"
+              >→</a
+            >
+          </div>
+          <div class="slice s1" style="background-image: url(./images/2.jpg)">
+            <span class="overlay"></span>
+
+            <div class="slice s2" style="background-image: url(./images/2.jpg)">
+              <span class="overlay"></span>
+
+              <div
+                class="slice s3"
+                style="background-image: url(./images/2.jpg)"
+              >
+                <span class="overlay"></span>
+
+                <div
+                  class="slice s4"
+                  style="background-image: url(./images/2.jpg)"
+                >
+                  <span class="overlay"></span>
+
+                  <div
+                    class="slice s5"
+                    style="background-image: url(./images/2.jpg)"
+                  >
+                    <span class="overlay"></span>
+                  </div>
+                  <!-- /s5 -->
+                </div>
+                <!-- /s4 -->
+              </div>
+              <!-- /s3 -->
+            </div>
+            <!-- /s2 -->
+          </div>
+          <!-- /s1 -->
+        </div>
+
+        <!-- ... -->
+
+        <div class="view">
+          <div class="view-back">
+            <span data-icon="A">566</span>
+            <span data-icon="B">124</span>
+            <a
+              href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream"
+              >→</a
+            >
+          </div>
+          <div class="slice s1" style="background-image: url(./images/ny.jpg)">
+            <span class="overlay"></span>
+
+            <div
+              class="slice s2"
+              style="background-image: url(./images/ny.jpg)"
+            >
+              <span class="overlay"></span>
+
+              <div
+                class="slice s3"
+                style="background-image: url(./images/ny.jpg)"
+              >
+                <span class="overlay"></span>
+
+                <div
+                  class="slice s4"
+                  style="background-image: url(./images/ny.jpg)"
+                >
+                  <span class="overlay"></span>
+
+                  <div
+                    class="slice s5"
+                    style="background-image: url(./images/ny.jpg)"
+                  >
+                    <span class="overlay"></span>
+                  </div>
+                  <!-- /s5 -->
+                </div>
+                <!-- /s4 -->
+              </div>
+              <!-- /s3 -->
+            </div>
+            <!-- /s2 -->
+          </div>
+          <!-- /s1 -->
+        </div>
+      </div>
+    </main>
+
+    <!-- CDNJS LIBRARIES: https://cdnjs.com/libraries/gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"
+      integrity="sha512-6MT8e40N5u36Um5SXKtwZmoKcCSg1XaKtexnXZPpQ4iJDHrBEHXKz37fnDovXezsaCd4oKCH5Y+vrcl7qpLPoA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
