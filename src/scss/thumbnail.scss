@@ -198,5 +198,5 @@
 
 // The detail part of the thumbnail that get’s revealed when we hover, will also have a background gradient, since we want to simulate a shadow falling on it:
 .view div.view-back {
-  background: linear-gradient(left, #0a0a0a 0%, #666666 100%);
+  background: linear-gradient(to left, #0a0a0a 0%, #666666 100%);
 }
