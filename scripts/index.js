@@ -59,7 +59,7 @@ window.onload = () => {
   }
 };
 
-// ========
+// ======== THUMBNAIL HOVER FUNCTION ===
 $.fn.hoverfold = function (args) {
   this.each(function () {
     $(this)
