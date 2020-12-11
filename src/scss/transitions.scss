@@ -11,10 +11,10 @@
   transition: 0.15s ease-out;
   /* pointer can block interactivity with the page */
   pointer-events: none;
-}
-.transition--home.is-active {
-  opacity: 1;
-  pointer-events: all;
+  &.is-active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 /* ===== CHAT Transition === */
@@ -28,9 +28,9 @@
   z-index: 101;
   background: rgb(36, 40, 49);
   transition: 0.15s ease-out;
-}
-.transition--chat.is-active {
-  top: 0;
+  &.is-active {
+    top: 0;
+  }
 }
 
 /* ===== LIKE Transition === */
@@ -45,9 +45,9 @@
   z-index: 101;
   background: rgb(36, 40, 49);
   transition: 0.15s ease-out;
-}
-.transition--like.is-active {
-  left: 0;
+  &.is-active {
+    left: 0;
+  }
 }
 
 /* ===== DOWNLOAD Transition === */
@@ -61,7 +61,7 @@
   z-index: 101;
   background: rgb(36, 40, 49);
   transition: 0.15s ease-out;
-}
-.transition--download.is-active {
-  right: 0;
+  &.is-active {
+    right: 0;
+  }
 }
