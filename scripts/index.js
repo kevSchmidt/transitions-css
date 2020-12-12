@@ -6,7 +6,7 @@ var timeLine = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 // create a toggle variable
 var toggle = false;
 
-// timeline animation: we use <to> instead of <from> (we're going TO the value we specify)
+// timeline animation: we use <to> instead of <from> (we're going TO the value we specify).
 timeLine.to(".activator", {
   background: "#805ad5",
   borderRadius: "5em 0 0 5em",
@@ -59,7 +59,7 @@ window.onload = () => {
   }
 };
 
-// ======== THUMBNAIL HOVER FUNCTION ===
+// ======== 3D THUMBNAIL HOVER EFFECT ===
 $.fn.hoverfold = function (args) {
   this.each(function () {
     $(this)
