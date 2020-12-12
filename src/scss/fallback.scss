@@ -1,0 +1,10 @@
+// In case we see that a browser does not support all those fancy 3D properties, we’ll simply load an additional stylesheet called fallback.css:
+.view {
+  overflow: hidden;
+  &:hover img {
+    left: -85px;
+  }
+  div.view-back {
+    background: #666;
+  }
+}

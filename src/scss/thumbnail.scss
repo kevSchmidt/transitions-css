@@ -1,3 +1,5 @@
+// ======== 3D THUMBNAIL HOVER EFFECT ===
+
 // Let’s define the style for the view divisions. What’s important here is that we add perspective:
 .view {
   width: 300px;
@@ -6,22 +8,21 @@
   float: left;
   position: relative;
   border: 8px solid #fff;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
   background: #333;
   perspective: 500px;
+  // The slices will need some 3D properties and a transition:
+  .slice {
+    width: 60px;
+    height: 100%;
+    z-index: 100;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: transform 150ms ease-in-out;
+  }
 }
 
-// The slices will need some 3D properties and a transition:
-.view .slice {
-  width: 60px;
-  height: 100%;
-  z-index: 100;
-  transform-style: preserve-3d;
-  transform-origin: left center;
-  transition: transform 150ms ease-in-out;
-}
-
-// The part of the description that get’s revealed when we push the slices to the side will have the following style:
+// The description that is revealed when we push the slices to the side will have the following style:
 .view div.view-back {
   width: 50%;
   height: 100%;
@@ -40,14 +41,13 @@
   text-align: right;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.view-back span:first-child {
-  padding-top: 20px;
+  &:first-child {
+    padding-top: 20px;
+  }
 }
 
 .view-back a {
-  display: bock;
+  display: block;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.4);
   position: absolute;
@@ -60,11 +60,10 @@
   line-height: 22px;
   text-align: center;
   font-weight: 700;
-}
-
-.view-back a:hover {
-  color: #fff;
-  border-color: #fff;
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+  }
 }
 
 // For the icon before the spans we’ll use an icon font that we’ve created with Fontello.
@@ -124,23 +123,10 @@
   transition: left 0.3s ease-in-out;
 }
 
-// In case we see that a browser does not support all those fancy 3D properties, we’ll simply load an additional stylesheet called fallback.css which will have the following content:
-// .view {
-//   overflow: hidden;
-// }
-
-// .view:hover img {
-//   left: -85px;
-// }
-
-// .view div.view-back {
-//   background: #666;
-// }
-
 // This will make the image slide to the left when we hover. For this example we will want to create a folding effect.
 // For that we’ll adjust the perspective value of the view division and the transition for all the divisions:
 .view {
-  perspective: 650px;
+  perspective: 600px;
 }
 
 .view div {
@@ -148,6 +134,10 @@
 }
 
 // The second, third, forth and fifth slice will be translated and rotated in 3D, creating the fold effect:
+// Each of these slices will be moved to the left. It should be the value of their widths but we want to avoid showing a little gap, so we use 59px.
+// The second slice will be rotated -45 degrees, making it turn towards the left.
+// The forth slice rotates the other way and the third and fifth will both rotate 90 degrees.
+// Remember, we are in a nested structure. Once we rotate a parent, the children will all be rotated.
 .view:hover .s2 {
   transform: translate3d(59px, 0, 0) rotate3d(0, 1, 0, -45deg);
 }
@@ -158,10 +148,6 @@
 .view:hover .s4 {
   transform: translate3d(59px, 0, 0) rotate3d(0, 1, 0, -90deg);
 }
-
-// Each of these slices will be moved to the left. It should be the value of their widths but we want to avoid showing a little gap, so we use 59px.
-// The second slice will be rotated -45 degrees, making it turn towards the left. The forth slice rotates the other way and the third and fifth will both rotate 90 degrees.
-// Remember, we are in a nested structure. Once we rotate a parent, the children will all be rotated.
 
 // To make things look a bit more realistic, we’ll add some gradients to the overlays:
 .view .s2 > .overlay {
@@ -196,7 +182,7 @@
   );
 }
 
-// The detail part of the thumbnail that get’s revealed when we hover, will also have a background gradient, since we want to simulate a shadow falling on it:
+// The detail part of the thumbnail that is revealed when we hover, will also have a background gradient, since we want to simulate a shadow falling on it:
 .view div.view-back {
   background: linear-gradient(to right, #0a0a0a 0%, #666666 100%);
 }
